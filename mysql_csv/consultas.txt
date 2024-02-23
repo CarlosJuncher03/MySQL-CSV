@@ -1,0 +1,2 @@
+SELECT vp.CodigoVenda, vp.CodigoProduto, vp.Descricao, vp.ValorUnitario, vp.ValorTotal FROM vendasprodutos vp INNER JOIN vendas v  ON v.Codigo = vp.CodigoVenda WHERE vp.Cancelada IS NULL AND v.`Status` = "f" AND v.Tipo = "vp";
+SELECT v.Codigo,v.`Data`,v.Hora,v.FormaParcelamento,v.TotalPedido FROM vendas v WHERE v.Status = "f" AND v.Cancelada IS NULL AND v.Tipo = "vp";
